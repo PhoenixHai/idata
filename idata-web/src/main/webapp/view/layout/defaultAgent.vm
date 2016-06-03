@@ -1,0 +1,54 @@
+#parse("tp/header.vm")
+<link rel="stylesheet" type="text/css"
+	href="${rc.contextPath}/css/shipper.css">
+<body>
+	<header>
+		<div class="header lCenter">
+			<img class="header-logo fl"
+				src="${rc.contextPath}/images/header-logo.png"> <span
+				class="header-title">短信网关系统</span>
+			<div class="header-con fr">
+				<div class="fl">
+					您好， <span id="recount">$!{name}</span>
+				</div>
+				<a class="header-close fl" href="${rc.contextPath}/logout?reurl=agent"> <img
+					src="${rc.contextPath}/images/header-close.png" />
+				</a>
+			</div>
+		</div>
+	</header>
+	<div class="lCenter clearfix">
+		<ul class="sidebar_a fl">
+			<li><a id="orderManagement" href="javascript:;"><span
+					class="menu_icon menu_icon11"></span>短信管理</a>
+				<div class="submenu">
+					<a id="submenu1" href="#springUrl('/agent/submitRecord')">发送记录</a>
+					<a id="submenu2" href="#springUrl('/agent/deliveryRecord')">客户回复</a>
+				</div></li>
+			<li><a id="creditManager" href="javascript:;"><span
+					class="menu_icon menu_icon13"></span>征信管理</a>
+				<div class="submenu">
+					<a id="submenu5" href="#springUrl('/agent/idCardRecord')">征信下发</a>
+				</div></li>
+		<!-- 	<li><a id="merchantManager" href="javascript:;"><span
+					class="menu_icon menu_icon14"></span>商户管理</a>
+				<div class="submenu">
+					<a id="submenu9" href="#">商户信息</a> <a
+						id="submenu10" href="#">账户信息</a> <a
+						id="submenu11" href="#">获取API接口信息</a>
+				</div></li> -->
+			<li><a id="accountManager" href="javascript:;"><span
+					class="menu_icon menu_icon14"></span>账户管理</a>
+				<div class="submenu">
+					<a id="submenu9" href="#">账户信息</a>
+					<a id="submenu10" href="">账户充值</a>
+				</div></li>
+			<li><a id="editPassword"
+				href="#"><span
+					class="menu_icon menu_icon14"></span>系统设置</a> <!-- <div class="submenu">
+						<a id="submenu9" href="">修改密码</a>
+						<a id="submenu10" href="">退出系统</a>
+						<a id="submenu11" href="">获取API接口信息</a>
+					</div> --></li>
+		</ul>
+		$screen_content #parse("tp/footer.vm")

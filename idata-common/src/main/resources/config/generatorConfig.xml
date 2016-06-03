@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.36\mysql-connector-java-5.1.36.jar" />
+	<context id="context1">
+		<!-- 抑制警告 -->
+		<property name="suppressTypeWarnings" value="true" />
+		<!-- generate entity时，生成hashcode和equals方法 -->
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<!-- generate entity时，生成serialVersionUID -->
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<!-- 这个插件只会增加字符串字段映射到一个JDBC字符的方法 -->
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+		<!-- genenat entity时,生成toString -->
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://203.195.187.30:3306/hz_sms" userId="root"
+			password="chaolink@2016" />
+		<javaTypeResolver>
+		<!-- <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://175.6.5.42:3306/wecard" userId="wecard"
+			password="we3WaPwdiF2015@Card;" />
+		<javaTypeResolver> -->
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.hz.sms.model"
+			targetProject="hzsms/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.hz.sms.mapping"
+			targetProject="hzsms/src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator targetPackage="com.hz.sms.dao"
+			targetProject="hzsms/src/main/java" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		 	<!-- <table schema="hzsms" tableName="sms_user" domainObjectName="User"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_waring_setting" domainObjectName="WaringSetting"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_uplink_record" domainObjectName="UplinkRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_product_price" domainObjectName="ProductPrice"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_merchant_recharge" domainObjectName="MerchantRecharge"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_merchant" domainObjectName="Merchant"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_mass_record" domainObjectName="MassRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_downlink_record" domainObjectName="DownlinkRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_daily_statistic" domainObjectName="DailyStatistic"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_credit_success" domainObjectName="CreditSuccess"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />  
+			<table schema="hzsms" tableName="sms_credit_record" domainObjectName="CreditRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />  
+			<table schema="hzsms" tableName="xinhua_credit_success_record" domainObjectName="CreditSuccess"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />  
+			<table schema="hzsms" tableName="xinhua_credit_submit_record" domainObjectName="CreditRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />-->
+			<table schema="hzsms" tableName="sms_deliver_record" domainObjectName="DeliverRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+			<table schema="hzsms" tableName="sms_submit_record" domainObjectName="SubmitRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> 
+	</context>
+</generatorConfiguration>

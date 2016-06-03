@@ -1,0 +1,12 @@
+*.classpath
+idata-common/.project
+*.prefs
+idata-common/.settings/org.eclipse.wst.common.project.facet.core.xml
+*.component
+*.class
+idata-quartz/.settings/org.eclipse.wst.common.project.facet.core.xml
+*.jsdtscope
+idata-service-impl/.project
+idata-service-impl/.settings/org.eclipse.wst.common.project.facet.core.xml
+idata-service-impl/.settings/org.eclipse.wst.jsdt.ui.superType.container
+idata-service-impl/.settings/org.eclipse.wst.jsdt.ui.superType.name
